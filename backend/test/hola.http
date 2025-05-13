@@ -1,5 +1,0 @@
-GET http://localhost:3000/hola
-
-###
-
-POST http://localhost:3000/chau
