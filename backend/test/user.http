@@ -1,0 +1,37 @@
+POST http://localhost:3000/api/login
+Accept: application/json
+Content-Type: application/json
+
+{
+    "username":"operator02",
+    "password": "1234"
+}
+
+###
+
+get http://localhost:3000/api/user
+Accept: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjIsInVzZXJuYW1lIjoib3BlcmF0b3IiLCJmdWxsTmFtZSI6Ik9wZXJhdG9yIiwicm9sZXMiOlsib3BlcmF0b3IiXSwiaWF0IjoxNzQ5MjUzMTkyLCJleHAiOjE3NDkyNTY3OTJ9.iUl7UDqNQ6u2hk6XHOe3_gwc_ToV_KFUBujaS0yRB0s
+Content-Type: application/json
+
+###
+
+POST http://localhost:3000/api/user
+Accept: application/json
+Authorization: Bearer 
+Content-Type: application/json
+
+{
+    "username": "operator",
+    "passwor": "1122",
+    "fullName": "Operator",
+    "roles": ["operator"],
+    "email": "operator@fake.com"
+}
+
+###
+
+DELETE http://localhost:3000/api/user
+Accept: application/json
+Authorization: Bearer
+Content-Type: application/json
