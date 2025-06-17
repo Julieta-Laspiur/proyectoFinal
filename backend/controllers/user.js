@@ -5,13 +5,13 @@ export function user (app) {
     app.get(
         '/user',
         checkForRole('admin'),
-        async (req res) => {
+        async (req, res) => {
             const users = await UserService.get();
             const result = users.map(user => ({
                 uuid: user.uuid,
                 username: user.username,
                 fullName: user.fullName,
-                email: useReducer.email,
+                email: user.email,
                 roles: user.roles,
             }));
 
