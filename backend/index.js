@@ -10,7 +10,6 @@ if (!config.jwtKey){
     process.exit(1);
 }
 
-const app = express();
 mongoose.connect(config.dbConnction)
     .then(()=> console.log('Conexión exitosa a MongoDB'))
     .catch(error => console.error('Error al conectar:', error));
