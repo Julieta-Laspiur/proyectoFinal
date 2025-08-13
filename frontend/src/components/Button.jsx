@@ -6,8 +6,8 @@ export default function Button({
         <button
             className="button"
             {...props}
-            >
-                {children}
-            </button>
+        >
+            {children}
+        </button>
     );
 }
