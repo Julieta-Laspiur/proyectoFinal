@@ -5,6 +5,7 @@ import configureDependencies from './configure_dependencies.js';
 import configureMiddleware from './middlewares/configure_middleware.js';
 
 
+
 if (!config.jwtKey){
     console.error(`No se ha definido un jwtKey en la configuración. Por favor cree un archivo config.local.js.`);
     process.exit(1);

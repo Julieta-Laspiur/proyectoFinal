@@ -1,3 +1,5 @@
+/* eslint-disable react-refresh/only-export-components */
+
 import { createContext, useContext, useState } from 'react';
 
 const ModalContext = createContext(null);
@@ -26,7 +28,7 @@ export const ModalProvider = ({ children }) => {
         { modal.content && (
             <div className="modal-background" style={{backdropFilter: 'blur(6px)'}}>
                 <div className="modal-body animate-modal" style={{position: 'relative'}}>
-                    <button className="modal-close" onClick={close} title="Cerrar modal">X</button>
+                    <button className="modal-close" onClick={close} title="Cerrar modal">x</button>
                     { modal.title && (
                      <div className="modal-head">
                         <span className="modal-title">{modal.title}</span>

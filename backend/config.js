@@ -1,11 +1,10 @@
-/* Cree un archivo local llamado config.local.js donde coloque los valores que no se almacenan en el repositorio*/
+//import configLocal from './config.local.js';
 
-import configLocal from './config.local.js';
-
-export var config ={
-    port:3000,
-    ...configLocal,
-
+var config ={
+     port: 3000,
+     dbconnection: 'mongodb://localhost:27017/proyectoFinal',
+     jwtKey: "1hlhhet4ystbh@njsjjtj1306",
+     //...configLocal,
 };
 
 export default config;
