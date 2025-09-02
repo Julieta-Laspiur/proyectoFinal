@@ -20,6 +20,7 @@ export default function Login() {
          if (data.token) {
             api.headers.Authorization = `Bearer ${data.token}`;
             session.setIsLoggedIn(true);
+            session.setUser(data.username);
 
             snackbar.enqueue('Ingreso OK', {variant: 'success', timeout: 6000});
          } else {

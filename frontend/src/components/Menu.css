@@ -1,0 +1,21 @@
+.menu ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  background-color: #7f7cad;
+  color: white;
+}
+
+.menu li {
+  display: inline-block;
+  margin: 0 1em;
+}
+
+.menu li:hover {
+    background-color: #82a79f;
+}
+
+.menu a {
+  text-decoration: none;
+  color: white;
+}

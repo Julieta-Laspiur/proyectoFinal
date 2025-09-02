@@ -42,6 +42,14 @@ export class LoginService {
         }
       );
 
-    return{token };
+    return{
+      token,
+      user: {
+        uuid:user.uuid,
+        username: user.username,
+        fullName: user.fullName,
+        roles: user.roles,
+      },
+     };
   }
 }
