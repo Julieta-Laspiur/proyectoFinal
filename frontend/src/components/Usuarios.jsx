@@ -1,14 +1,15 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
+import * as userService from '../services/userService.js';
 
 export default function Usuarios() {
-    const [usuarios] = useState([
-    {uuid: "1", username: "joe", fullName: "Administrador del sistema", email: "algo@example.com", roles: ["user"]},
-    {uuid: "2", username: "mary", fullName: "Mary Poppins", email: "m@example.com", roles: [ "admin"]},
-    {uuid: "3", username: "jane", fullName: "Jane Doe", email: "jane@example.com", roles: ["user", "admin"]},
+    const [usuarios, setUsuarios] = useState([]);
 
-    ]);
+    useEffect(() => {
+        userService.get()
+        .then(setUsuarios);
+    }, []);
 
-    return <table>
+    return <table className= "data-table">
         <thead>
             <tr>
                 <th>Nombre de usuario</th>
@@ -18,14 +19,12 @@ export default function Usuarios() {
             </tr>
         </thead>
         <tbody>
-            {usuarios.map( usuario =>  <tr>
+            {usuarios.map( usuario =>  <tr key={usuario.uuid}>
                 <td>{usuario.username}</td>
                 <td>{usuario.fullName}</td>
                 <td>{usuario.email}</td>
                 <td>{usuario.roles.join(', ')}</td>
-            </tr>
-               
-            )}
+            </tr>)}
         </tbody>
     </table>
 }
