@@ -9,9 +9,9 @@ export class UserService{
         return (await UserModel.find({username}))[0];
 
     }
-    static async get() {
+    static async get(filter) {
         const UserModel = getDependency('UserModel');
-        return await UserModel.find({});
+        return await UserModel.find({filter});
 
     }
 
